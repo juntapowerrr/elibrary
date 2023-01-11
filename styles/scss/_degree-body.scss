@@ -1,0 +1,75 @@
+.materials {
+    h2 {
+        padding: 10px 0;
+    }
+
+    .title-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+
+        .b-logo {
+            max-width: 50px;
+            max-height: 50px;
+            margin: 0 15px 0 0;
+        }
+
+        @media screen and (max-width: 780px) {
+            padding: 30px 0;
+            transition: all .3s ease;
+
+            .b-logo {
+                max-width: 40px;
+                max-height: 40px;
+                margin: 0 10px 0 0;
+                transition: all .3s ease;
+            }
+
+            h1 {
+                font-size: $font-size-l;
+                transition: all .3s ease;
+            }
+        }
+
+        .m-logo {
+            max-width: 74px;
+            max-height: 48px;
+            margin: 0 15px 0 0;
+        }
+
+        @media screen and (max-width: 780px) {
+            padding: 30px 0;
+            transition: all .3s ease;
+
+            .m-logo {
+                max-width: 37px;
+                max-height: 24px;
+                margin: 0 10px 0 0;
+                transition: all .3s ease;
+            }
+
+            h1 {
+                font-size: $font-size-l;
+                transition: all .3s ease;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            padding: 15px 0;
+            transition: all .3s ease;
+        }
+    }
+
+    .course-txt {
+        border-bottom: 2px solid rgba($color: $hover, $alpha: 0.5);
+    }
+
+    .accordeon {
+        margin-top: 15px;
+    }
+}
+
+.footer {
+    margin-top: 20px;
+}

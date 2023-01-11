@@ -1,0 +1,152 @@
+// header {
+//     background-color: white;
+//     position: sticky;
+//     top: 0;
+//     z-index: 100;
+//     width: 100%;
+//     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+// }
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.header {
+    background-color: $light-gray-2;
+    padding: 30px 0;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: ' ';
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+
+    @media screen and (max-width: 767px) {
+        min-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (max-width: 991px) {
+        padding: 20px 0;
+    }
+
+    .logo {
+        font-size: $font-size-m;
+        text-transform: uppercase;
+        float: left;
+        transition: all .3s;
+
+        @media screen and (max-width: 991px) {
+            float: none;
+            text-align: center;
+        }
+    }
+
+    .btn-menu {
+        display: none;
+        height: 30px;
+        padding: 0 5px;
+        background-color: $light-gray-2;
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 50px;
+        left: 25px;
+        cursor: pointer;
+
+        span {
+            background-color: $light-gray;
+            width: 20px;
+            height: 2px;
+            display: block;
+
+            &+span {
+                margin-top: 4px;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            display: block;
+        }
+    }
+
+    .menu {
+        list-style-type: none;
+        text-align: center;
+        float: right;
+
+        @media screen and (max-width: 991px) {
+            display: none;
+            position: absolute;
+            top: 130px;
+            left: 0;
+            right: 0;
+            text-align: left;
+            background-color: $light-gray-2;
+            border-top: 1px solid $light-gray;
+            box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+
+            // padding: 10px 0;
+            // z-index: 999;
+
+            // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     top: 100%;
+            //     left: 0;
+            //     z-index: -10;
+            //     width: 100%;
+            //     height: 100vh;
+            //     background: rgba(black, 0.7);
+            // }
+        }
+
+        &.open {
+            display: block;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 15px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @media screen and (max-width: 991px) {
+                display: block;
+                margin-right: 0;
+                padding: 5px 25px;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgba($light-gray, .3);
+                }
+
+            }
+
+            a {
+                line-height: 30px;
+                transition: all .3s;
+
+                &:hover {
+                    color: $hover;
+                }
+            }
+
+            &.active a {
+                color: $hover;
+            }
+        }
+    }
+
+}

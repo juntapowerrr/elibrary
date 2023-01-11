@@ -1,0 +1,98 @@
+.accordeon {
+    //max-width: 460px;
+    height: 100%;
+    width: 100%;
+}
+
+.accordeon__item {
+    background: rgba($color: $white, $alpha: 1.0);
+    box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
+    color: $gray;
+    border-radius: 15px;
+    //cursor: pointer;
+    margin-bottom: 6px;
+}
+
+.accordeon__button {
+    position: relative;
+    background: rgba($color: $white, $alpha: 1.0);
+    box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
+    color: $gray; //
+    padding: 15px 22px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+
+    @media screen and (max-width: 450px) {
+        font-size: 14px;
+        transition: all .3s ease;
+    }
+}
+
+.accordeon__button:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    border: 8px solid transparent;
+    border-top: 14px solid $hover;
+    border-bottom: 14px solid transparent;
+    transition: border-bottom 0.5s ease, border-top 0.5s ease, bottom 0.5s ease;
+}
+
+// .accordeon__item:nth-child(2n) .accordeon__button {
+//     background: #e7e7e7;
+//     color: #4f4f4f; 
+// }
+
+// .accordeon__item:nth-child(2n) .accordeon__button.activeA {
+//     background: #FF8663;
+//     color: #ffffff;
+// }
+
+.accordeon__panel {
+    color: #4f4f4f;
+    border-radius: 22px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.panel__text {
+    padding: 10px 30px;
+    font-size: 18px;
+    width: 100%;
+    border-spacing: 0 10px;
+    transition: all .3s ease;
+
+    @media screen and (max-width: 500px) {
+        padding: 10px;
+        font-size: 14px;
+        border-spacing: 0 5px;
+    }
+
+    @media screen and (max-width: 350px) {
+        font-size: 13px;
+    }
+
+    tr>td>a {
+        color: $light-blue;
+
+        &:hover {
+            color: $hover;
+            transition: all .3s ease;
+        }
+    }
+}
+
+.activeA {
+    background: rgba($color: $gray, $alpha: 0.9);
+    //box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+.activeA:after {
+    bottom: 20px;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid #ffffff;
+}

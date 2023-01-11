@@ -1,0 +1,152 @@
+//variables
+
+//color
+$black: #000000;
+$white: #FFFFFF;
+$gray: #17161C;
+$light-gray: #727272;
+$light-gray-2: #EDEDED;
+$hover: #ce1b28;
+$light-blue: #1E90FF;
+//font-size
+$font-size-xs: 15px;
+$font-size-s: 20px;
+$font-size-m: 32px;
+$font-size-l: 40px;
+$font-size-xl: 60px;
+
+
+//text
+.txt {
+
+    //color
+    &-main {
+        color: $gray;
+    }
+
+    &-white {
+        color: $white;
+    }
+
+    &-black {
+        color: $black;
+    }
+
+    //font-size
+    &-xs {
+        font-size: $font-size-xs;
+    }
+
+    &-s {
+        font-size: $font-size-s;
+    }
+
+    &-m {
+        font-size: $font-size-m;
+    }
+
+    &-l {
+        font-size: $font-size-l;
+    }
+
+    &-xl {
+        font-size: $font-size-xl;
+    }
+
+    //font-weight
+    &-fw400 {
+        font-weight: 400;
+    }
+
+    &-fw500 {
+        font-weight: 500;
+    }
+
+    &-fw600 {
+        font-weight: 600;
+    }
+
+    &-fw700 {
+        font-weight: 700;
+    }
+
+    &-fw800 {
+        font-weight: 800;
+    }
+
+    &-fw900 {
+        font-weight: 900;
+    }
+
+    //position and CAPS
+    &--center {
+        text-align: center;
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+}
+
+.bgc {
+    &-main {
+        background-color: $light-gray-2;
+    }
+
+    &-red {
+        background-color: rgba($hover, 0.15);
+    }
+
+    &-gradient1 {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(206, 27, 40, 0.15) 100%);
+    }
+
+    &-gradient2 {
+        background: rgb(206, 27, 40);
+        background: linear-gradient(90deg, rgba(206, 27, 40, 0.15) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+}
+
+//containers
+.container {
+    max-width: 1020px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.reverse-1 {
+    order: 1;
+}
+
+.reverse-2 {
+    order: 2;
+}
+
+//buttons
+.btn {
+    &-main {
+        //padding: 13px 60px;
+        width: 290px;
+        height: 45px;
+        background-color: $light-gray;
+        border: 1px solid $light-gray;
+        border-radius: 25px;
+        cursor: pointer;
+
+        &:hover {
+            color: $hover;
+            background-color: $white;
+            border: 1px solid $hover;
+            transition: all .3s ease;
+            transform: scale(1.03);
+        }
+    }
+}
+
+//box-shadow
+.shadow {
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+}
