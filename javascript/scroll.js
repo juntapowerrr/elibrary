@@ -1,10 +1,10 @@
 $('.flowing-scroll').on('click', function () {
     var el = $(this);
-    var dest = el.attr('href'); // получаем направление
-    if (dest !== undefined && dest !== '') { // проверяем существование
+    var dest = el.attr('href'); // отримуємо напрямок
+    if (dest !== undefined && dest !== '') { // перевіряємо існування
         $('html').animate({
-            scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
-        }, 500 // скорость прокрутки
+            scrollTop: $(dest).offset().top // прокручуємо сторінку до необхідного елемента
+        }, 500 // швидкість прокрутки
         );
     }
     return false;

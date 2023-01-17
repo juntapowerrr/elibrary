@@ -1,6 +1,5 @@
 @import 'reset'; //reset CSS file
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); //font
-@import 'mixin'; //responsive font-size
 @import 'common'; //components and variables
 @import 'preloader'; //preloader page styles
 @import 'header'; //header styles
@@ -12,22 +11,25 @@
     background-color: $light-gray-2;
 
     &__wrapper {
-        display: flex;
+        display: flex; //використовуємо Flexbox верстку
         align-items: center;
         flex-wrap: wrap;
         padding: 50px 0;
 
         @media screen and (max-width: 850px) {
+            //адаптуємо розташування при роздільній здатності екрану менш ніж 850px
             flex-direction: column;
             padding: 10px 0 50px 0;
         }
 
         .title-block {
+            //стилізуємо блок с заголовками
             padding: 20px 0;
             max-width: 50%;
 
             h1 {
                 @media screen and (max-width: 375px) {
+                    //змінюємо розмір шрифту для моб.пристроїв
                     font-size: 50px;
                     transition: all .3s ease;
                 }
@@ -38,6 +40,7 @@
                 margin-top: 40px;
 
                 @media screen and (max-width: 375px) {
+                    //змінюємо розмір шрифту та положення тексту для моб. пристроїв
                     margin-top: 20px;
                     font-size: 16px;
                     transition: all .3s ease;

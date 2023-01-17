@@ -1,16 +1,16 @@
 .footer {
-    &-menu {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        padding: 20px 0;
+    &-menu { 
+        display: flex; //використовуємо Flex-box верстку
+        justify-content: flex-end; //розташовуємо елементи в правому кутку сторінки
+        align-items: flex-start; //позиціонуємо елементи зверху вниз
+        padding: 20px 0; //внутрішній відступ
 
-        @media screen and (max-width: 991px) {
+        @media screen and (max-width: 991px) { //центруємо елементи по центру при адаптуванні
             justify-content: center;
         }
 
-        &__list {
-            &:first-child {
+        &__list { //стилізуємо меню
+            &:first-child { //першому елементу робимо зовнішній відступ справа та адаптуємо
                 margin-right: 50px;
 
                 @media screen and (max-width: 767px) {
@@ -18,20 +18,20 @@
                 }
             }
 
-            li {
-                margin-top: 5px;
+            li { //стилізуємо елементи меню
+                margin-top: 5px; //зовнішній відступ сверху
 
-                &:first-child {
+                &:first-child { //першому елементу додаємо внутрішній відступ та нижню рамку
                     padding-bottom: 5px;
                     border-bottom: 1px solid $hover;
 
-                    &:hover {
+                    &:hover { //міняємо колір рамки при наведенні
                         border-bottom: 1px solid $gray;
                         transition: all .3s ease;
                     }
                 }
 
-                a:hover {
+                a:hover { //використовуємо просту анімацію при наведенні на посилання
                     display: block;
                     color: $hover;
                     transform: scale(1.02);
@@ -41,16 +41,16 @@
         }
     }
 
-    .copyright {
+    .copyright { //стилізуємо блок про права
         padding: 10px 0;
 
-        &-text {
-            @media screen and (max-width: 767px) {
+        &-text { 
+            @media screen and (max-width: 767px) { //адаптуємо розмір шрифта
                 font-size: 12px;
                 transition: all .3s ease;
             }
 
-            a {
+            a { //задаємо колір посилання та його зміну при наведенні
                 color: rgba($color: $gray, $alpha: 0.8);
 
                 &:hover {

@@ -1,16 +1,18 @@
 .preloader {
+    //розміщуємо позицію прелоадеру на сторінці
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     overflow: hidden;
-    /* фоновый цвет */
+    /* фоновий колір */
     background: #e0e0e0;
     z-index: 1001;
 }
 
 .preloader__image {
+    //задаємо параметри та позицію зображення прелоадеру
     position: relative;
     top: 50%;
     left: 50%;
@@ -23,16 +25,20 @@
 }
 
 @keyframes preloader-rotate {
+
+    //анімуємо зображення постійним обертанням на 360 градусів
     100% {
         transform: rotate(360deg);
     }
 }
 
 .loaded_hiding .preloader {
+    //задаємо параметри плавності появлення завантаження
     transition: .5s opacity;
     opacity: 0;
 }
 
 .loaded .preloader {
+    // ховаємо прелоадер, коли сторінка була завантажена
     display: none;
 }

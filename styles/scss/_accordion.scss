@@ -1,5 +1,4 @@
 .accordeon {
-    //max-width: 460px;
     height: 100%;
     width: 100%;
 }
@@ -9,7 +8,6 @@
     box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
     color: $gray;
     border-radius: 15px;
-    //cursor: pointer;
     margin-bottom: 6px;
 }
 
@@ -39,16 +37,6 @@
     border-bottom: 14px solid transparent;
     transition: border-bottom 0.5s ease, border-top 0.5s ease, bottom 0.5s ease;
 }
-
-// .accordeon__item:nth-child(2n) .accordeon__button {
-//     background: #e7e7e7;
-//     color: #4f4f4f; 
-// }
-
-// .accordeon__item:nth-child(2n) .accordeon__button.activeA {
-//     background: #FF8663;
-//     color: #ffffff;
-// }
 
 .accordeon__panel {
     color: #4f4f4f;
@@ -87,7 +75,6 @@
 
 .activeA {
     background: rgba($color: $gray, $alpha: 0.9);
-    //box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.5);
     color: #ffffff;
 }
 
