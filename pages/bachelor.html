@@ -9,6 +9,8 @@
     <link rel="icon" href="../assets/images/logo.png" sizes="any">
     <link rel="stylesheet" href="../styles/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
 </head>
 
 <body>
@@ -94,9 +96,24 @@
                                 <td>11.01.23</td>
                             </tr>
                             <tr>
-                                <td><a href="https://docs.google.com/document/d/1QNqZ11S7Tz5ddz8rHh9lzeJiKMrtAiA5/edit?usp=share_link&ouid=115081877703613569871&rtpof=true&sd=true"
+                                <!-- <td><a href="https://docs.google.com/document/d/1QNqZ11S7Tz5ddz8rHh9lzeJiKMrtAiA5/edit?usp=share_link&ouid=115081877703613569871&rtpof=true&sd=true"
                                         target="_blank">Лабораторна робота №5</a></td>
+                                <td>11.01.23</td> -->
+                                <td><a href="#" id="show">Лабораторна робота №5</a></td>
                                 <td>11.01.23</td>
+                                <div class="pdf-viewer">
+                                    <div class="pdf-viewer__iframe">
+                                        <iframe src="https://drive.google.com/file/d/1dkeGBlhgMRdmmxVvj1E9-N-_fdmZvA5p/preview" width="100%" height="100%"></iframe>
+                                        <button type="button" class="btn-close">
+                                            <span class="icon-cross"></span>
+                                            <span class="visually-hidden">Close</span>
+                                        </button>
+                                        <div class="download">
+                                            <a href="https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1dkeGBlhgMRdmmxVvj1E9-N-_fdmZvA5p" class="download-btn"><i class="fa"></i></a>
+                                          </div>
+                                    </div>
+                                    <script src="../javascript/pdfviewer.js"></script>
+                                </div>
                             </tr>
                             <tr>
                                 <th>3ds Max</th>
@@ -379,7 +396,7 @@
             </p>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <a href="https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1dkeGBlhgMRdmmxVvj1E9-N-_fdmZvA5p">Download</a>
     <script src="../javascript/header.js"></script>
     <script src="../javascript/scroll.js"></script>
     <script src="../javascript/wow.min.js"></script>

@@ -1,0 +1,218 @@
+.pdf-viewer{
+    background: rgba($color: #000000, $alpha: 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    z-index: 10;
+        &__iframe{
+            position: relative;
+            // left: 0;
+            // right: 0;
+            // display: flex;
+            width: 100%;
+            height: 100%;
+            max-width: 875px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+}
+
+// Display a cross with CSS only.
+//
+// $size  : px or em
+// $color : color
+// $thickness : px
+@mixin cross($size: 20px, $color: currentColor, $thickness: 1px) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: relative;
+    width: $size;
+    height: $size;
+  
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(($size - $thickness) / 2);
+      left: 0;
+      right: 0;
+      height: $thickness;
+      background: $color;
+      border-radius: $thickness;
+    }
+  
+    &:before {
+      transform: rotate(45deg);
+    }
+  
+    &:after {
+      transform: rotate(-45deg);
+    }
+  
+    span {
+      display: block;
+    }
+  
+  }
+  
+  
+  // Example 1.
+  .btn-close {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    margin-left: 10px;
+    background: #0066ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.5);
+    transition: all 150ms;
+    
+    .icon-cross {
+      @include cross(25px, #fff, 4px);   
+    }
+    
+    &:hover,
+    &:focus {
+        transform: rotateZ(90deg);
+        background: rgba($color: $hover, $alpha: 1);
+        -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+    }
+  
+  }
+  
+  // Example 2.
+  .cross-stand-alone {
+    @include cross(40px, #000, 4px);  
+  }
+  
+  
+  // Example 3.
+  .cross-1px {
+    @include cross(80px, #000);  
+  }
+  
+  
+  // For screen readers.
+  .visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+
+  
+$bp: 255px;
+  
+  .download{
+    flex: 0 0 auto;
+    width: 70px;
+    height: 150px;
+    
+    @media screen and (height <= $bp) {
+      margin: 25px auto;
+    }
+  }
+  
+  .download-btn{
+    // display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    padding: 10px;
+    border: 0;
+    border-radius: 50%;
+    background: #0066ff;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: all 1.2s ease-in-out;
+    
+    i::after {
+      content: "\f019";
+      font-size: 30px;
+      color: #fff;
+    }
+    
+    &:hover {
+      animation: pulse 0.2s 2 both;
+    }
+    
+    &.loading {
+      i {
+        animation: loading 2s infinite linear;
+        
+        &::after {
+          content: "\f1ce";
+        }        
+      }
+    }
+    
+    &.success {
+      border-radius: 50%;
+      background: #80bca3;
+      
+      i::after {
+        content: "\f00c";
+        color: transparent;
+        animation: change-icon 1s 0.6s linear both;
+      }
+    }
+  }
+  
+  @keyframes loading {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+  }
+  
+  @keyframes change-icon {
+    0% {
+      color: transparent;
+    }
+    
+    100% {
+      color: #fff;
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
