@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#show').click(function() {
+    $('#show').click(function() { //натисканням на елемент 
         $('.pdf-viewer').fadeToggle("fast");
     });
     $('.btn-close').click(function() {
@@ -12,16 +12,16 @@ if(downloadButton) {
   downloadButton.addEventListener('click', function(event) {
     //event.preventDefault();
     
-    /* Start loading process. */
+    /* Почати процес завантаження. */
     downloadButton.classList.add('loading');
     
-    /* Set delay before switching from loading to success. */
+    /* Задати затримку перед переходом від завантаження до успішного завершення. */
     window.setTimeout(function() {
       downloadButton.classList.remove('loading');
       downloadButton.classList.add('success');
     }, 1000);
     
-    /* Reset animation. */
+    /* Перезавантажити анімацію. */
     window.setTimeout(function() {
       downloadButton.classList.remove('success');
     }, 8000);

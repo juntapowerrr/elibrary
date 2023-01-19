@@ -21,7 +21,7 @@
     margin-top: -50px;
     margin-left: -50px;
     text-align: center;
-    animation: preloader-rotate 2s infinite linear;
+    animation: preloader-rotate .1s infinite linear;
 }
 
 @keyframes preloader-rotate {
