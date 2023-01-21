@@ -49,6 +49,9 @@ button {
 .txt-black {
   color: #000000;
 }
+.txt-red {
+  color: #ce1b28;
+}
 .txt-xs {
   font-size: 15px;
 }
@@ -148,7 +151,7 @@ button {
   bottom: 0;
   overflow: hidden;
   /* фоновий колір */
-  background: #e0e0e0;
+  background: #EDEDED;
   z-index: 1001;
 }
 
@@ -161,7 +164,7 @@ button {
   margin-top: -50px;
   margin-left: -50px;
   text-align: center;
-  animation: preloader-rotate 2s infinite linear;
+  animation: preloader-rotate 0.5s infinite linear;
 }
 
 @keyframes preloader-rotate {

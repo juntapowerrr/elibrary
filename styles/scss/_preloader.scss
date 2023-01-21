@@ -7,7 +7,7 @@
     bottom: 0;
     overflow: hidden;
     /* фоновий колір */
-    background: #e0e0e0;
+    background: $light-gray-2;
     z-index: 1001;
 }
 
@@ -21,7 +21,7 @@
     margin-top: -50px;
     margin-left: -50px;
     text-align: center;
-    animation: preloader-rotate .1s infinite linear;
+    animation: preloader-rotate 0.5s infinite linear;
 }
 
 @keyframes preloader-rotate {
@@ -34,7 +34,7 @@
 
 .loaded_hiding .preloader {
     //задаємо параметри плавності появлення завантаження
-    transition: .5s opacity;
+    transition: 0.5s opacity;
     opacity: 0;
 }
 

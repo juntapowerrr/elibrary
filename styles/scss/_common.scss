@@ -32,6 +32,10 @@ $font-size-xl: 60px;
         color: $black;
     }
 
+    &-red{
+        color: $hover;
+    }
+
     //font-size
     &-xs {
         font-size: $font-size-xs;
